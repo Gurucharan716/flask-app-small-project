@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Square Root Calculator</title>
+</head>
+<body>
+    <h1>Square Root Calculator</h1>
+    <form action="/sqrt" method="post">
+        <label for="number">Enter a number:</label>
+        <input type="number" name="number" id="number" required>
+        <button type="submit">Calculate</button>
+    </form>
+    {% if number and result %}
+        <h2>Result:</h2>
+        <p>Square root of {{ number }} is {{ result }}</p>
+    {% endif %}
+</body>
+</html>
